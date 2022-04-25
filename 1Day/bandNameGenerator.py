@@ -1,4 +1,3 @@
-
 def bandNameGenarator():
     run = True
     while run:
@@ -7,5 +6,6 @@ def bandNameGenarator():
         petName = input("What's your pet's name?\n")
         print(f"Your band name could be {cityName} {petName}.")
         run = False
+
 
 bandNameGenarator()
