@@ -53,5 +53,5 @@ def generate_password_order_randomised():
     return password_randomised
 
 
-password = generate_password_order_randomised()
-print(f'Your password is: {password}')
+password_order_randomised = generate_password_order_randomised()
+print(f'Your password is: {password_order_randomised}')
