@@ -3,11 +3,6 @@ from random import randint
 
 EASY = 10
 HARD = 5
-print(logo)
-print("Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 and 100.")
-
-random_number = randint(0, 100)
 
 
 def set_difficulty():
@@ -19,12 +14,16 @@ def set_difficulty():
 
 
 def game():
+    print(logo)
+    print("Welcome to the Number Guessing Game!")
+    print("I'm thinking of a number between 1 and 100.")
+    random_number = randint(0, 100)
+
     def decrease_one():
         return guess - 1
 
     guess = set_difficulty()
     print(f'You have {guess} attempts remaining to guess the number.')
-    number_entered = -1
     while guess > 0:
         number_entered = int(input("Make a guess: "))
         if number_entered > random_number:
