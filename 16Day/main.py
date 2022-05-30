@@ -16,7 +16,7 @@ def main():
     menu = Menu()
     off = False
     while not off:
-        command = input(f"What would you like? {menu.get_items()}: \n")
+        command = input(f"What would you like? {menu.get_items()}: ")
         if command in COMMAND:
             if command == "off":
                 print("Have a nice day.\n")
