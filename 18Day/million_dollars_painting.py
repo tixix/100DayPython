@@ -7,6 +7,7 @@ timmy_the_turtle.hideturtle()
 MAX_ANKLE = 360
 SPEED = 'fastest'
 t.colormode(255)
+timmy_the_turtle.penup()
 
 
 def define_rgb_colors_image(path_to_image, number_of_colors):
@@ -28,7 +29,6 @@ def draw_spot_painting(size_of_each_dot, number_of_dots_per_row, rows, dist_of_d
     timmy_the_turtle.speed(SPEED)
     for row in range(rows):
         for dot in range(number_of_dots_per_row):
-            timmy_the_turtle.penup()
             timmy_the_turtle.fd(dist_of_dots)
             timmy_the_turtle.dot(size_of_each_dot, random.choice(define_rgb_colors_image('image/image.jpg', 30)))
         timmy_the_turtle.backward(number_of_dots_per_row * dist_of_dots)  # no change in the turtle’s heading.
@@ -37,7 +37,7 @@ def draw_spot_painting(size_of_each_dot, number_of_dots_per_row, rows, dist_of_d
         timmy_the_turtle.left(MAX_ANKLE / 4)
 
 
-draw_spot_painting(size_of_each_dot=10, number_of_dots_per_row=20, rows=10, dist_of_dots=30)
+draw_spot_painting(size_of_each_dot=20, number_of_dots_per_row=20, rows=10, dist_of_dots=30)
 screen = t.Screen()
 screen.exitonclick()
 
